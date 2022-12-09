@@ -41,3 +41,5 @@ cmake-build-debug/CMakeFiles/TargetDirectories.txt
 cmake-build-debug/projekt_2_cpp.exe
 cmake-build-debug/Testing/Temporary/LastTest.log
 CMakeLists.txt
+cmake-build-debug/output200000insertionSort.txt
+cmake-build-debug/output200000mergeSort.txt
