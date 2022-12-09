@@ -20,14 +20,15 @@ int getArraySize(string fileName) {
 }
 
 void getArrayFromFile(int array[], string fileName) {
-    int bin;
+    int arraySize = 0;
+    int counter = 1;
     ifstream File;
     File.open(fileName);
     File.clear();
     if(File.is_open()) {
-        File >> bin;
-        int counter = 1;
-        while(!File.eof()) {
+        File >> arraySize;
+        while(counter < arraySize + 1) {
+            cout << counter << ": essa" << endl;
             File >> array[counter - 1];
             counter++;
         }

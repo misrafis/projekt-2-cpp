@@ -13,18 +13,18 @@ int main() {
 
     for (const auto &item : examples) {
         int arraySize = getArraySize(item);
-        int arrayForMergeSort[arraySize];
-        int arrayForInsertionSort[arraySize];
+        int array[arraySize];
 
-        getArrayFromFile(arrayForInsertionSort, item);
-        getArrayFromFile(arrayForMergeSort, item);
+        getArrayFromFile(array, item);
 
         auto mergeSortStart = high_resolution_clock::now();
-        mergeSort(arrayForMergeSort,0, arraySize - 1);
+        mergeSort(array,0, arraySize - 1);
         auto mergeSortStop = high_resolution_clock::now();
 
+        getArrayFromFile(array, item);
+
         auto insertionSortStart = high_resolution_clock::now();
-        insertionSort(arrayForInsertionSort, arraySize);
+        insertionSort(array, arraySize);
         auto insertionSortStop = high_resolution_clock::now();
 
         auto durationMergeSort = duration_cast<milliseconds>(mergeSortStop - mergeSortStart);
