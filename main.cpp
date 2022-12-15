@@ -15,7 +15,6 @@ int main() {
     vector<string>inputNames = {};
 
     for (const auto &inputName : inputNames) {
-        int i = 0;
         int arraySize = getArraySize(inputName);
         auto arraySizeString = std::to_string(arraySize);
         cout << arraySize << endl;
@@ -39,9 +38,9 @@ int main() {
         writeArrayToFile(array, arraySize, durationMergeSort, "mergeSort", "output" + arraySizeString + "mergeSort.txt");
         writeArrayToFile(array, arraySize, durationInsertionSort, "insertionSort", "output" + arraySizeString + "insertionSort.txt");
 
-        cout << "Sortowanie przez scalanie dla tablicy o " << arraySize << " elementow - czas: " << durationMergeSort << endl;
+        cout << "Sortowanie przez scalanie dla tablicy o " << arraySize << " elementow - czas: " << durationMergeSort << "ms" << endl;
         cout << endl;
-        cout << "Sortowanie przez wstawianiedla tablicy o " << arraySize << " elementow - czas: " << durationInsertionSort << endl;
+        cout << "Sortowanie przez wstawianiedla tablicy o " << arraySize << " elementow - czas: " << durationInsertionSort << "ms" << endl;
         cout << endl;
         delete[] array;
     }

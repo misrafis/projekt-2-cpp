@@ -30,7 +30,7 @@ void merge(int array[], int idxLeft, int idxMid, int idxRight) {
         currArrIdx++;
     }
 
-    // Jeśli w którejś z podtablic zostały jakieś elementy ustawiamy jest w głównej tablicy.
+    // Jeśli w którejś z podtablic zostały jakieś elementy ustawiamy je w głównej tablicy.
     while (currLeftIdx < leftArraySize) {
         array[currArrIdx] = leftArray[currLeftIdx];
         currLeftIdx++;
@@ -49,7 +49,7 @@ void mergeSort(int array[], int idxLeft, int idxRight) {
     // Jeśli indeks początkowy jest mniejszy od końcowego, tablica nie jest jeszcze posortowana.
     if (idxLeft < idxRight) {
         // Obliczamy indeks środkowego elementu głównej tablicy.
-        int idxMid = idxLeft + (idxRight - idxLeft) / 2;
+        int idxMid = (idxLeft + idxRight) / 2;
 
         // Wykonujemy rekurencyjnie naszą funkcję, dopóki nie otrzymamy jednoelementowych tablic.
         mergeSort(array, idxLeft, idxMid);
